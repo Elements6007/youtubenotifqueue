@@ -21,7 +21,7 @@ display: flex;
 const addQueueButton = async () => {
     console.log("adding queue button");
     setTimeout(function () {
-        queuebtnexist = document.getElementById("qeuebtn");
+        queuebtnexist = document.getElementById("queue-btn");
         if (!queuebtnexist) {
             var styleSheet = document.createElement("style")
             styleSheet.innerText = styles;
@@ -47,8 +47,9 @@ const addQueueButton = async () => {
 
 const eventListener = async () => {
     console.log("running eventListener");
-    console.log("queuenoexist");
+    setTimeout(function () {
     document.querySelector('[aria-label="Notifications"]').addEventListener("click", addQueueButton);
+    }, 1000)
 };
 
 function clickHandler() {

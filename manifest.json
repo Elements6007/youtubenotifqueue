@@ -1,6 +1,6 @@
 {
     "name": "Notifications Queue",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "manifest_version": 3,
     "host_permissions": ["https://*.youtube.com/*"],
     "description" : "Add YouTube notifications to queue",
@@ -18,5 +18,12 @@
           ],
           "matches": ["https://*.youtube.com/*"]
         }
-    ]
+    ],
+    "icons": {
+      "16": "assets/playlist-play.png",
+      "24": "assets/playlist-play.png",
+      "32": "assets/playlist-play.png",
+      "48": "assets/playlist-play.png",
+      "128": "assets/playlist-play.png"
+    }
 }
