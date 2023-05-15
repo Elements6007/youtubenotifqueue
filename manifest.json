@@ -1,6 +1,6 @@
 {
     "name": "Notifications Queue",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "manifest_version": 3,
     "host_permissions": ["https://*.youtube.com/*"],
     "description" : "Add YouTube notifications to queue",

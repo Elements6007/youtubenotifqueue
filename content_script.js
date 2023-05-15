@@ -51,22 +51,8 @@ const eventListener = async () => {
     document.querySelector('[aria-label="Notifications"]').addEventListener("click", addQueueButton);
 };
 
-const notifclicked = async () => {
-    console.log("objclicked");
-    //var selector = document.querySelectorAll('.style-scope ytd-notification-renderer [safe-area]').length;
-    //for (i = 0; i < selector; i++) {
-    setTimeout(function () { //timeout is necessary to wait for ajax response.
-        var selector = document.querySelectorAll('#menu.style-scope.ytd-notification-renderer > .style-scope.ytd-notification-renderer').length;
-        for (i = 0; i < selector; i++) {
-            document.querySelectorAll('#menu.style-scope.ytd-notification-renderer > .style-scope.ytd-notification-renderer')[i].getElementsByClassName("style-scope yt-icon-button")[0].addEventListener("click", addQueueButton);
-        }
-    }, 500)
-    //}
-};
-
 function clickHandler() {
     console.log("clicked");
 }
-
 
 eventListener();
