@@ -1,4 +1,4 @@
-let queueBtn, objclickvalue, ident, videoId;
+let queueBtn, objclickvalue, ident;
 
 var styles =
     `
@@ -35,6 +35,7 @@ const addQueueButton = async () => {
                 console.log(videoId[1]);
                 queueBtn = document.createElement("img");
                 queueBtn.id = "queue-btn";
+                queueBtn.className = i;
                 queueBtn.setAttribute("videoId", videoId[1]);
                 queueBtn.src = chrome.runtime.getURL("assets/playlist-play.svg");
                 list[i].appendChild(queueBtn);
@@ -48,12 +49,14 @@ const addQueueButton = async () => {
 const eventListener = async () => {
     console.log("running eventListener");
     setTimeout(function () {
-    document.querySelector('[aria-label="Notifications"]').addEventListener("click", addQueueButton);
+        document.querySelector('[aria-label="Notifications"]').addEventListener("click", addQueueButton);
     }, 1000)
 };
 
-function clickHandler() {
-    console.log("clicked");
+const clickHandler = async (event) => {
+    const getId = event.target.className;
+    const videoId = document.getElementsByClassName(getId)[0].getAttribute("videoid");
+    console.log(videoId);
 }
 
 eventListener();
